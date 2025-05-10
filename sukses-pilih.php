@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,6 +18,7 @@
     <!-- Favicon -->
     <link rel="icon" href="./images/favicon.ico" type="image/png">
 </head>
+
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
@@ -53,7 +55,7 @@
                         $domisili = $_POST['domisili'];
                         $nama_kandidat = $_POST['nama_kandidat'];
                         $id_kandidat = $_POST['id_kandidat'];
-                        
+
                         // Tampilkan pesan sukses
                         echo '
                         <div class="card shadow-lg border-0 rounded-3 overflow-hidden animate-fade-in">
@@ -62,7 +64,7 @@
                             </div>
                             <div class="card-body p-4 p-md-5">
                                 <div class="text-center mb-4">
-                                    <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_jbrw3hcz.json" background="transparent" speed="1" style="width: 400px; height: 400px; margin: 0 auto;" autoplay loop></lottie-player>
+                                    <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_jbrw3hcz.json" background="transparent" speed="1" style="width: 400px; height: 200px; margin: 0 auto;" autoplay loop></lottie-player>
                                     
                                     <h3 class="mt-4 mb-3">Terima kasih atas partisipasi Anda!</h3>
                                     <p class="lead mb-4">Suara Anda telah tercatat dalam sistem kami.</p>
@@ -132,33 +134,32 @@
                                                 <h5 class="fw-bold mb-0">' . $nama_kandidat . ' <span class="badge bg-primary ms-2">Kandidat #' . $id_kandidat . '</span></h5>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="alert alert-info" role="alert">
-                                    <div class="d-flex">
-                                        <div class="me-3">
-                                            <i class="fas fa-info-circle fa-2x"></i>
+
+                                        <div class="alert alert-info mt-3" role="alert">
+                                            <div class="d-flex">
+                                                <div class="me-3">
+                                                    <i class="fas fa-info-circle fa-2x"></i>
+                                                </div>
+                                                <div>
+                                                    <h5 class="alert-heading">Informasi Penting</h5>
+                                                    <p class="mb-0">Suara Anda telah tercatat dalam sistem kami. Terima kasih telah berpartisipasi dalam proses demokrasi ini. Hasil pemilihan akan diumumkan pada tanggal 10 Mei 2025.</p>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div>
-                                            <h5 class="alert-heading">Informasi Penting</h5>
-                                            <p class="mb-0">Suara Anda telah tercatat dalam sistem kami. Terima kasih telah berpartisipasi dalam proses demokrasi ini. Hasil pemilihan akan diumumkan pada tanggal 10 Mei 2025.</p>
+
+                                        <div class="text-center mt-4">
+                                            <a href="index.php" class="btn btn-primary btn-lg rounded-pill px-4 me-2">
+                                                <i class="fas fa-home me-2"></i>Kembali ke Beranda
+                                            </a>
+                                            <a href="profil-kandidat.php" class="btn btn-outline-primary btn-lg rounded-pill px-4">
+                                                <i class="fas fa-users me-2"></i>Lihat Kandidat Lain
+                                            </a>
                                         </div>
                                     </div>
-                                </div>
-                                
-                                <div class="text-center mt-4">
-                                    <a href="index.php" class="btn btn-primary btn-lg rounded-pill px-4 me-2">
-                                        <i class="fas fa-home me-2"></i>Kembali ke Beranda
-                                    </a>
-                                    <a href="profil-kandidat.php" class="btn btn-outline-primary btn-lg rounded-pill px-4">
-                                        <i class="fas fa-users me-2"></i>Lihat Kandidat Lain
-                                    </a>
                                 </div>
                             </div>
                         </div>';
                     } else {
-                        // Jika tidak ada data yang dikirim, redirect ke halaman profil kandidat
                         echo '<script>window.location.href = "profil-kandidat.php";</script>';
                     }
                     ?>
@@ -175,7 +176,7 @@
                     <h3 class="footer-title">Pemilu 2025</h3>
                     <p>Platform resmi untuk pemilihan kandidat kampanye politik 2025. Suara Anda menentukan masa depan bangsa.</p>
                 </div>
-                
+
                 <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
                     <h5 class="text-white mb-3">Navigasi</h5>
                     <ul class="list-unstyled">
@@ -183,7 +184,7 @@
                         <li class="mb-2"><a href="profil-kandidat.php" class="footer-link">Profil Kandidat</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
                     <h5 class="text-white mb-3">Kontak</h5>
                     <ul class="list-unstyled">
@@ -192,7 +193,7 @@
                         <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Jakarta, Indonesia</li>
                     </ul>
                 </div>
-                
+
                 <div class="col-lg-3 col-md-4">
                     <h5 class="text-white mb-3">Media Sosial</h5>
                     <div class="d-flex">
@@ -203,7 +204,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="footer-bottom text-center">
                 <p class="mb-0">&copy; 2025 Pemrograman Web Pemilihan Kandidat. All rights reserved.</p>
             </div>
@@ -215,4 +216,5 @@
     <!-- Custom JS -->
     <script src="js/script.js"></script>
 </body>
+
 </html>
